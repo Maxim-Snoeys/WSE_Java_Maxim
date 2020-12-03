@@ -39,6 +39,6 @@ public class Persoon {
     }
 
     public String toString() {
-        return familienaam.toUpperCase()+ " " + voornaam;
+        return familienaam.toUpperCase()+ " " + "maxim";
     } // Aangepast
 }
