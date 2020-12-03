@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--Maxim Snoeys R0792870-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="img/style.css"/>
+    <title>Welkom</title>
+</head>
+<body>
+    <h1>Supermarkt Klant Registratie</h1>
+    <div>
+        <span th:text="Welkom + ' ' + ${klant.toString()}"></span>
+    </div>
+    <p><a href="/">Terug naar beginpagina</a></p>
+</body>
+</html>

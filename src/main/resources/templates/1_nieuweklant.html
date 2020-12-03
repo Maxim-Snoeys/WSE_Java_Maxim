@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--Maxim Snoeys R0792870-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="img/style.css"/>
+    <title>Nieuwe klant</title>
+</head>
+<body>
+    <h1>Klant Registratie</h1>
+    <div>
+        <form action="2_welkom">
+            <div class="form-group">
+                <label for="voornaam" class="col-1">Voornaam:</label>
+                <input type="text" id="voornaam" name="voornaam" placeholder="Uw Voornaam" class="col-2">
+            </div>
+            <div class="form-group">
+                <label for="achternaam" class="col-1">Achternaam:</label>
+                <input type="text" id="achternaam" name="achternaam" placeholder="Uw Achternaam" class="col-2">
+            </div>
+            <div class="form-group">
+                <label for="geboortejaar" class="col-1">Geboortejaar:</label>
+                <input type="text" id="geboortejaar" name="geboortejaar" placeholder="Uw Geboortejaar" class="col-2">
+            </div>
+            <div class="form-group" th:each="winkel: ${winkellijst}">
+                <input type="radio" id="winkel" name="winkel" th:checked="${winkelStat.index} == 0" th:value="${winkelStat.index}">
+                <label for="winkel"><span th:text="${winkel.getNaam()}"></span></label>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Ga door als klant met aanmaak klantkaartnr</button>
+            </div>
+            <p><a href="/">Terug naar beginpagina</a></p>
+        </form>
+    </div>
+</body>
+</html>

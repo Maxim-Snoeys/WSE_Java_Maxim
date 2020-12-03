@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--Maxim Snoeys R0792870-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="img/style.css"/>
+    <title>Klantregistratie</title>
+</head>
+<body>
+    <h1>Supermarkt Personeels Data</h1>
+    <div>
+        <ul>
+            <li th:each="personeelslid: ${personeelsleden}"
+            th:text="${personeelslid.toString()}">
+            </li>
+        </ul>
+    </div>
+    <p><a href="/">Terug naar beginpagina</a></p>
+</body>
+</html>

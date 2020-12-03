@@ -1,0 +1,21 @@
+/*Maxim Snoeys R0792870*/
+body {
+    margin: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 700px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+img {
+    max-height: 300px;
+}
+
+.lijstje {
+    list-style-type: none;
+}

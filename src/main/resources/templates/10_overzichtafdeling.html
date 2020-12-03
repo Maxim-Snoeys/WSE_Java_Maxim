@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--Maxim Snoeys R0792870-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="img/style.css"/>
+    <title>Overzicht Afdeling</title>
+</head>
+<body>
+<h1 th:text="'Dit zijn de afdelingen van supermarkt ' + ${supermarkt.getNaam()}"></h1>
+
+<div class="lijstje">
+    <li th:each="afdeling: ${supermarkt.getAfdelingen()}">
+        <h1 th:text="${afdeling.getNaam()}"></h1>
+        <p th:if="${afdeling.isGekoeld() == true}" th:text="${afdeling.getNaam()} + ' - Gekoelde afdeling'"></p>
+        <p th:unless="${afdeling.isGekoeld() == true}" th:text="${afdeling.getNaam()} + ' - Niet gekoelde afdeling'"></p>
+        <p th:text="'Verantwoordelijke: ' + ${afdeling.getVerantwoordelijke().getVoornaam()} + ' ' + ${afdeling.getVerantwoordelijke().getFamilienaam()}"></p>
+        <img onerror="this.src='img/niet.jpg'" th:src="@{${afdeling.getFoto()}}">
+    </li>
+</div>
+
+<p><a href="/">Terug naar beginpagina</a></p>
+</body>
+</html>
